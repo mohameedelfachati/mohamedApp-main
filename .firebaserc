@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "angularproject-adbaa": {
+      "hosting": {
+        "mohamedapp": [
+          "angularproject-adbaa"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+<div >
+<h1>Naruto SHIPPUDDEN</h1>
+<table>
+<tr>
+<th>image</th>
+<th>name</th>
+<th>caracteristique</th>
+</tr>
+<tr>
+<td><img src="./../assets/naruto.jpg" width="100px" /></td>
+<td>Naruto UZUMAKI</td>
+<td>Kyubi</td>
+</tr>
+</table>
+</div>
+<hr>
+<div class="row" *ngIf="!isSignedIn">
+<input type="text" placeholder="email"   #emailsignup>
+<input type="text" placeholder="password" #passwordsignup >
+<button (click)="onSignup(emailsignup.value,passwordsignup.value)">sign up</button>
+</div>
+<hr>
+<div class="row" *ngIf="!isSignedIn">
+<input type="text" placeholder="email"   #email>
+<input type="text" placeholder="password" #password >
+<button (click)="onSignin(email.value,password.value)">sign in</button>
+</div>
+
+<app-home [emailHome]="email" (isLogout)="handleLogout()" *ngIf="isSignedIn"></app-home>
